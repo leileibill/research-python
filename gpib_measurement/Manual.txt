@@ -1,0 +1,76 @@
+Pilawa Instruments Manual
+=========================
+Last revision: 8/23/2013
+
+
+Overview
+--------
+"Pilawa Instruments" includes the package "pilawa_package" and the module "pilawa_instruments.py", which is used to conveniently access the package. The package provides a way to organize the code files and allows easy modifications to small portions of code at a time. The code is sorted into sub-packages based on the type of instrument it is for. Each instrument's code is then written in an individual module (.py file), which can be edited without having to change the rest of the package. The module name is typically "<brand>_<serial number>" and the single class within the module is typically named "prologix_<serial number>".
+
+
+Modifying the Package
+---------------------
+Individual modules can be modified without affecting the rest of the package as long as the class and module names remain the same. Otherwise, rename the fields associated with creating a new module, as addressed in the following discussion.
+When adding new modules, the list variable "__all__" in the module "__init__.py" of the containing sub-package must be changed to include the name of the new module as a string. The code should have the following form:
+
+	__all__ = ['agilent_34401a', 'agilent_34410a', 'agilent_34461a', 'fluke_45']
+
+Next, the new module must be imported into "pilawa_instruments.py". This is already done above if adding to an existing sub-package. Otherwise, import * from the sub-package into "pilawa_instruments.py". This might look like this:
+
+	from pilawa_package.multimeters import *
+
+Finally, assign the class to a variable for easy access (less typing). The variable name is usually the same as the class name. For example:
+
+	prologix_34401a = agilent_34401a.prologix_34401a
+
+Remember to update revision dates and redistribute to any group mates.
+
+
+How to Use
+----------
+To use "Pilawa Instruments", make sure "pilawa_instruments.py" and "pilawa_package" are in the same directory. First, import the needed classes from "pilawa_instruments.py" into the code being run (importing * is okay, too).
+Now, for most instruments, there are two ways to communicate with it: using USB via a Prologix controller (more information at http://prologix.biz/gpib-usb-controller.html), or using Ethernet. There is a helper class associated with each method, "prologix_serial" and "prologix_socket", respectively, and their modules are located in the top-level of the package (i.e. not in a sub-package). These classes have the same method names to be as interchangeable as possible, but, of course, the instantiation syntaxes are different. The input argument values can usually be found on the physical device.
+After instantiating one of these classes, it can be passed as an object to the instrument. Most instrument classes are instantiated by taking the aforementioned class object as an input argument (an exception is "microcontroller_serial_ro", which is used on its own). Once instantiation is complete, the methods of the instrument class can be called.
+Example using USB:
+
+	from pilawa_instruments import prologix_serial
+	from pilawa_instruments import prologix_34401a
+
+	gpib = prologix_serial(port='/dev/ttyUSB0', timeout=5)
+
+	device0 = prologix_34401a(prologix=gpib, addr=1, mode='VOLT')
+	device1 = prologix_34401a(prologix=gpib, addr=2, mode='CURR')
+
+	device0.waitForTrigger()
+	device1.waitForTrigger()
+	gpib.trigger_devices([1, 2])
+	#Insert more code here
+
+	gpib.terminate()
+
+Example using ethernet:
+
+	from pilawa_instruments import prologix_socket
+	from pilawa_instruments import prologix_34401a
+
+	socket0 = prologix_socket(host='123.456.789.012', port=5025, timeout=10)
+	socket1 = prologix_socket(host='dhcp101.ece.illinois.edu', port=5025, timeout=10)
+
+	device0 = prologix_34401a(prologix=socket0, addr=1337, mode='VOLT')
+	device1 = prologix_34401a(prologix=socket1, addr=9001, mode='CURR')
+
+	device0.waitForTrigger()
+	device1.waitForTrigger()
+	socket0.trigger_devices()
+	socket1.trigger_devices('blah')
+	#Insert more code here
+
+	socket0.terminate()
+	socket1.terminate()
+
+It is good practice to close all ports when finished.
+
+
+Differences Between Serial and Socket
+-------------------------------------
+In addition to different instantiation syntax, there are some distinctions between serial and socket that may be helpful to keep in mind. First, a separate "prologix_socket" class needs to be instantiated for each instrument, while only one "prologix_serial" class is required. Likewise, each "prologix_socket" class will have to be terminated individually, while the single "prologix_serial" class is simply terminated once. In addition, (or rather, as a result,) "prologix_socket" does not use "addr"; the latter is simply used as a placeholder for interchangeability between serial and socket (an integer input argument is still required, however). Therefore, the "set_address" method in "prologix_socket" does nothing. Also, this results in significant differences in the "trigger_devices()" methods. For "prologix_serial", a list of addresses to be triggered is required as an input. On the other hand, each "prologix_socket" class is linked to a single device, and "trigger_devices()" must be called for each instrument being triggered. As such, any input that may be passed to the method is ignored.
