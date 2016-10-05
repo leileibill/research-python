@@ -46,7 +46,7 @@ eload.setMode("RES")
 eload.setSlew(10)
 eload.setValue(100)
 
-load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 10, 8, 7, 6]
+load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 10, 9, 8, 7, 6, 5, 4.5, 4, 3.5, 3, 2.8]
 load_current = np.arange(0.2, 1.0 + 0.1, 0.1)
 
 
@@ -135,6 +135,12 @@ for iter in range(N):
 
 f.close()
 eload.setMode("RES")
+eload.setValue(5)
+time.sleep(time_to_observe_1)
+eload.setValue(10)
+time.sleep(time_to_observe_1)
+eload.setValue(20)
+time.sleep(time_to_observe_1)
 eload.setValue(100)
 setVoltage(power_supply, 0, 10)
 gpib.serial.close()
