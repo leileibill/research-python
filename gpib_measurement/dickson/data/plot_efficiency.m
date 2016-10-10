@@ -6,7 +6,7 @@ set_figure_style_pre();
 plot_type = 'rout';
 
 to_plot = { ... % 50 50 250 20 ''; ...
-            ... % 50 50' 250 20 '_diode'; ...
+             50 50 250 20 '_diode'; ...
             ... % 90 80 250 20 ''; ...
             ... % 90 50 250 20 ''; ...
             90 80 250 20 '_diode'; ...
@@ -22,12 +22,13 @@ for index = 1:num_to_plot
 
     file = sprintf('SC_Regulation_%iV_%i_%ik_%iOhm%s.dat',to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5})
     data = csvread(file,1,0);
+    duty = to_plot{index,2}/100;
     vin = data(:,1);
     vout = data(:,3);
     iout = data(:,4);
     efficiency = data(:,7);
     ploss = data(:,5) - data(:,6);
-    rout = (vin/6*0.8 - vout)./iout;
+    rout = (vin/6*duty - vout)./iout;
     
     if strcmp(plot_type,'loss') == 1
         loglog(iout, ploss);
@@ -37,7 +38,7 @@ for index = 1:num_to_plot
         plot(iout,rout,Marker{index});
     end
     hold on;
-    legend_info{index} = sprintf('%iV %i %ik %iOhm %s',to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5});
+    legend_info{index} = sprintf('%iV 0.%i %ik %iOhm %s',to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5});
 end
 
 set_figure_style();
