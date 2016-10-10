@@ -6,13 +6,14 @@ set_figure_style_pre();
 plot_type = 'rout';
 
 to_plot = { ... % 50 50 250 20 ''; ...
-             50 50 250 20 '_diode'; ...
+            ... % 50 50 250 20 '_diode'; ...
+            130 55 250 20 '_diode'; ...
             ... % 90 80 250 20 ''; ...
             ... % 90 50 250 20 ''; ...
             90 80 250 20 '_diode'; ...
             };
-x_axis = 'iout';
-y_axis = 'loss';
+% x_axis = 'iout';
+
 Marker = {'^-','o-','x-','s-','-+','.-'};
 num_to_plot = length(to_plot(:,1));
 legend_info = {};
@@ -20,7 +21,8 @@ legend_info = {};
 
 for index = 1:num_to_plot
 
-    file = sprintf('SC_Regulation_%iV_%i_%ik_%iOhm%s.dat',to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5})
+    file = sprintf('./L_6500n/SC_Regulation_%iV_%i_%ik_%iOhm%s.dat',... 
+        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5})
     data = csvread(file,1,0);
     duty = to_plot{index,2}/100;
     vin = data(:,1);
@@ -38,7 +40,8 @@ for index = 1:num_to_plot
         plot(iout,rout,Marker{index});
     end
     hold on;
-    legend_info{index} = sprintf('%iV 0.%i %ik %iOhm %s',to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5});
+    legend_info{index} = sprintf('%iV 0.%i %ik %iOhm %s',... 
+        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5});
 end
 
 set_figure_style();
@@ -50,13 +53,13 @@ if strcmp(plot_type,'loss') == 1
     ylabel('Power loss (W)')
     plot([1 10], [0.1 10], '--')
     plot([0.1 10], [0.1 10], '--')
-elseif strcmp(plot_type,'loss') == 1
+elseif strcmp(plot_type,'efficiency') == 1
     ylim([90 97])
-    xlim([0.5 4])
+    xlim([0.5 5])
     ylabel('Efficiency (\%)')
 else
-%     ylim([90 97])
-    xlim([0.5 4])
+    ylim([0 0.2])
+    xlim([0.0 5])
     ylabel('Output resistance ($\Omega$)')   
 end
 
