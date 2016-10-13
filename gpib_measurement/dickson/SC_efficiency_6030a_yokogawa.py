@@ -35,7 +35,7 @@ meter_Out = prologix_wt310(prologix=gpib, addr=1, debug=False)
 # =========================================================================/
 power_supply.setCurrent(1.1)
 power_supply.setVoltage(0)
-setVoltage(power_supply,130,4)
+setVoltage(power_supply,50,5)
 
 # eload.setMode("CURR")
 # eload.setSlew(10)
@@ -45,8 +45,8 @@ setVoltage(power_supply,130,4)
 eload.setMode("RES")
 eload.setSlew(10)
 eload.setValue(100)
-
-load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4, 3.5, 3, 2.5]
+load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10]
+# load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4.5, 4, 3.5, 3, 2.75, 2.5]
 load_current = np.arange(0.2, 1.0 + 0.1, 0.1)
 
 
@@ -142,7 +142,7 @@ time.sleep(time_to_observe_1)
 eload.setValue(20)
 time.sleep(time_to_observe_1)
 eload.setValue(100)
-setVoltage(power_supply, 0, 10)
+setVoltage(power_supply, 0, 20)
 gpib.serial.close()
 
 # ==========================================================================
