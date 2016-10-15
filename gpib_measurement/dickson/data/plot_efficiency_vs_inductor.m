@@ -3,7 +3,7 @@ close all
 clc
 scale = 2;
 set_figure_style_pre();
-plot_type = 'efficiency';
+plot_type = 'loss';
 
 legend_info = {};
 Marker = {'^-','o-','x-','s-','-+','.-'};
@@ -34,15 +34,15 @@ for index = 1:num_to_plot
     rout = (vin/6*duty - vout)./iout;
     
     if strcmp(plot_type,'loss') == 1
-        loglog(iout, ploss);
+        loglog(iout, ploss,Marker{1});
     elseif strcmp(plot_type,'efficiency') == 1
-        plot(iout,efficiency*100,Marker{index});
+        plot(iout,efficiency*100,Marker{1});
     else
-        plot(iout,rout,Marker{index});
+        plot(iout,rout,Marker{1});
     end
     hold on;
-    legend_info{index} = sprintf('1uH %iV 0.%i %ikHz %i$\\Omega$ %s',... 
-        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5}(2:end))
+    legend_info{index} = sprintf('1uH %iV 0.%i %ikHz %i$\\Omega$',... 
+        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4})
 end
 
 %%  5600 nH inductor
@@ -70,15 +70,15 @@ for index = 1:num_to_plot
     rout = (vin/6*duty - vout)./iout;
     
     if strcmp(plot_type,'loss') == 1
-        loglog(iout, ploss);
+        loglog(iout, ploss,Marker{2});
     elseif strcmp(plot_type,'efficiency') == 1
-        plot(iout,efficiency*100,Marker{index});
+        plot(iout,efficiency*100,Marker{2});
     else
-        plot(iout,rout,Marker{index});
+        plot(iout,rout,Marker{2});
     end
     hold on;
-    legend_info{end+1} = sprintf('5.6uH %iV 0.%i %ikHz %i$\\Omega$ %s',... 
-        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5}(2:end))
+    legend_info{end+1} = sprintf('5.6uH %iV 0.%i %ikHz %i$\\Omega$',... 
+        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4})
 end
 %%
 if strcmp(plot_type,'loss') == 1
@@ -92,7 +92,7 @@ elseif strcmp(plot_type,'efficiency') == 1
     xlim([0 5])
     ylabel('Efficiency (\%)')
 else
-    ylim([0 0.2])
+    ylim([-0.5 0.5])
     xlim([0.0 5])
     ylabel('Output resistance ($\Omega$)')   
 end
