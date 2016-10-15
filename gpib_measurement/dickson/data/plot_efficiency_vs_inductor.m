@@ -2,8 +2,8 @@ clear
 close all
 clc
 scale = 2;
-set_figure_style_pre();
-plot_type = 'loss';
+set_figure_style_pre(2);
+plot_type = 'efficiency';
 
 legend_info = {};
 Marker = {'^-','o-','x-','s-','-+','.-'};
@@ -11,7 +11,9 @@ Marker = {'^-','o-','x-','s-','-+','.-'};
 inductor = '1000n';
 to_plot = { 90 80 250 20 '_diode80_deadtime'; ...
             90 80 500 20 '_diode80_deadtime'; ...
-            130 55 500 20 '_diode80_deadtime'; ...
+            90 80 700 20 '_diode80_deadtime'; ...            
+            130 55 250 20 '_diode90_deadtime'; ...             
+            130 55 500 20 '_diode90_deadtime'; ...       
             };
 
 %     x_axis = 'iout';

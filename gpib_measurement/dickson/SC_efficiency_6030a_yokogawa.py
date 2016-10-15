@@ -35,7 +35,7 @@ meter_Out = prologix_wt310(prologix=gpib, addr=1, debug=False)
 # =========================================================================/
 power_supply.setCurrent(1.1)
 power_supply.setVoltage(0)
-setVoltage(power_supply,130,5)
+setVoltage(power_supply,90,5)
 
 # eload.setMode("CURR")
 # eload.setSlew(10)
