@@ -11,9 +11,9 @@ Marker = {'^-','o-','x-','s-','-+','.-'};
 inductor = '1000n';
 to_plot = { 90 80 250 20 '_diode80_deadtime'; ...
             90 80 500 20 '_diode80_deadtime'; ...
-            90 80 700 20 '_diode80_deadtime'; ...            
-            130 55 250 20 '_diode90_deadtime'; ...             
-            130 55 500 20 '_diode90_deadtime'; ...       
+            ... % 90 80 700 20 '_diode80_deadtime'; ...            
+            ... % 130 55 250 20 '_diode90_deadtime'; ...             
+            ... % 130 55 500 20 '_diode90_deadtime'; ...       
             };
 
 %     x_axis = 'iout';
@@ -36,7 +36,7 @@ for index = 1:num_to_plot
     rout = (vin/6*duty - vout)./iout;
     
     if strcmp(plot_type,'loss') == 1
-        loglog(iout, ploss,Marker{1});
+        plot(iout, ploss,Marker{1});
     elseif strcmp(plot_type,'efficiency') == 1
         plot(iout,efficiency*100,Marker{1});
     else
@@ -49,7 +49,7 @@ end
 
 %%  5600 nH inductor
 inductor = '5600n';
-to_plot = { 130 55 250 20 '_diode80'; ...
+to_plot = { ... % 130 55 250 20 '_diode80'; ...
             ... %150 48 250 20 '_diode'; ...
             ... %150 48 300 20 '_diode'; ...
             ... % 90 80 250 20 ''; ...
@@ -72,7 +72,7 @@ for index = 1:num_to_plot
     rout = (vin/6*duty - vout)./iout;
     
     if strcmp(plot_type,'loss') == 1
-        loglog(iout, ploss,Marker{2});
+        plot(iout, ploss,Marker{2});
     elseif strcmp(plot_type,'efficiency') == 1
         plot(iout,efficiency*100,Marker{2});
     else
@@ -94,8 +94,8 @@ elseif strcmp(plot_type,'efficiency') == 1
     xlim([0 5])
     ylabel('Efficiency (\%)')
 else
-    ylim([-0.5 0.5])
-    xlim([0.0 5])
+    ylim([0 0.2])
+    xlim([0.5 5])
     ylabel('Output resistance ($\Omega$)')   
 end
 
