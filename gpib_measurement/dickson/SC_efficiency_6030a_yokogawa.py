@@ -35,7 +35,7 @@ meter_Out = prologix_wt310(prologix=gpib, addr=1, debug=False)
 # =========================================================================/
 power_supply.setCurrent(1.1)
 power_supply.setVoltage(0)
-setVoltage(power_supply,50,5)
+setVoltage(power_supply,130,5)
 
 # eload.setMode("CURR")
 # eload.setSlew(10)
@@ -45,7 +45,7 @@ setVoltage(power_supply,50,5)
 eload.setMode("RES")
 eload.setSlew(10)
 eload.setValue(100)
-load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10]
+load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6]
 # load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4.5, 4, 3.5, 3, 2.75, 2.5]
 load_current = np.arange(0.2, 1.0 + 0.1, 0.1)
 
@@ -155,7 +155,8 @@ plt.grid(True)
 # plt.xlim(0, 5)
 plt.ylim(70, 100)
 
-plt.savefig("data/%s_%s.pdf" % ("SC_Regulation", timestamp))
+filename = "%s_%s.png" % ("SC_Regulation", timestamp)
+plt.savefig(foldername + "/" + filename)
 plt.show()
 
 

@@ -2,7 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c06c2d-ff28-4e2f-a300-4d6338c0c463" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161010/SC_Regulation_20161010_155607.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161010/SC_Regulation_20161010_162707.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161013/SC_Regulation_20161013_110044.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161013/SC_Regulation_20161013_131057.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161013/SC_Regulation_20161013_131312.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161013/SC_Regulation_20161013_131738.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161013/SC_Regulation_20161013_132113.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161013/SC_Regulation_20161013_132752.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_130V_55_250k_20Ohm_diode.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_130V_55_250k_20Ohm_diode.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_130V_55_250k_20Ohm_diode80.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_150V_48_250k_20Ohm_diode.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_150V_48_300k_20Ohm_diode.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_0p5_200k_100Ohm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_0p5_250k_100Ohm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_0p5_250k_20Ohm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_0p5_250k_20Ohm_diode.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_50_200k_100Ohm.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_50_250k_100Ohm.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_50_250k_20Ohm.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_50_250k_20Ohm_diode.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_50_250k_20Ohm_diode75.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_50_250k_20Ohm_diode85.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_50V_50_250k_20Ohm_diode852.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_0p5_250k_20Ohm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_0p8_250k_20Ohm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_0p8_250k_20Ohm_diode.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_0p8_250k_20Ohm_diode_old.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_50_250k_20Ohm.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_80_200k_20Ohm_diode75.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_80_250k_20Ohm.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_80_250k_20Ohm_diode.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_80_250k_20Ohm_diode66.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_80_250k_20Ohm_diode75.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_80_250k_20Ohm_diode80.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_80_250k_20Ohm_diode85.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L_6500n/SC_Regulation_90V_80_250k_20Ohm_diode_old.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_155607.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_160035.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_160620.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_160907.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_161619.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_162707.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_163311.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_164108.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_164431.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_164843.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_165758.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_170145.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161010_170456.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_103514.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_105649.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_110044.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_110714.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_112813.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_113912.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_122011.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_122430.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_123402.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_123850.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_131057.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_131312.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_131738.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_132113.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/SC_Regulation_20161013_132752.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/plot_efficiency_vs_incutor.m" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC_efficiency_6030a_yokogawa.py" afterPath="$PROJECT_DIR$/SC_efficiency_6030a_yokogawa.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/plot_efficiency.m" afterPath="$PROJECT_DIR$/data/plot_efficiency.m" />
     </list>
@@ -27,8 +92,8 @@
       <file leaf-file-name="SC_efficiency_6030a_yokogawa.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SC_efficiency_6030a_yokogawa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="160">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -86,7 +151,74 @@
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pilawa_package" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pilawa_package" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="power_supplies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dickson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pilawa_package" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimeters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -300,23 +432,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1932" height="1047" extended-state="1" />
+    <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15010683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33041576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12553419" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3301282" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18959913" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18959913" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -451,8 +583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SC_efficiency_6030a_yokogawa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="160">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
