@@ -45,7 +45,7 @@ setVoltage(power_supply,90,5)
 eload.setMode("RES")
 eload.setSlew(10)
 eload.setValue(100)
-load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6]
+load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4.5, 4, 3.5, 3, 2.75, 2.5]
 # load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4.5, 4, 3.5, 3, 2.75, 2.5]
 load_current = np.arange(0.2, 1.0 + 0.1, 0.1)
 
