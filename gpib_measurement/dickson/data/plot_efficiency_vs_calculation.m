@@ -8,14 +8,36 @@ plot_type = 'loss';
 legend_info = {};
 Marker = {'^-','o-','x-','s-','-+','.-'};
 
-inductor = '5600n';
+inductor = '1000n';
+to_compare = 'frequency';
 
-to_plot = { 90 80 250 20 66; ...
-            90 80 250 20 75; ...
-            90 80 250 20 80; ...
-            90 80 250 20 85; ...      
-            };
-
+if strcmp(inductor, '5600n') ==1
+    L = 5.6e-6;
+    if strcmp(to_compare, 'vin') == 1
+        to_plot = { 90 80 250 20 80 ''; ...
+                    130 55 250 20 80 '';...
+                    150 48 250 20 '' '';...
+                    };
+    elseif strcmp(to_compare, 'frequency') ==1
+        to_plot = { 90 80 250 20 80 ''; ...
+                    90 80 300 20 80 '';...
+                    90 80 375 20 80 '';...
+                };
+    end
+elseif strcmp(inductor, '1000n') ==1
+    L = 1.0e-6;
+    if strcmp(to_compare, 'vin') == 1
+        to_plot = { 90 80 500 20 80 '_deadtime'; ...
+                    130 55 500 20 80 '_deadtime';...
+                    ... %150 48 250 20 80 'deadtime';...
+                    };
+    elseif strcmp(to_compare, 'frequency') ==1
+        to_plot = { 90 80 250 20 80 '_deadtime'; ...
+                    90 80 500 20 80 '_deadtime';...
+                    90 80 700 20 80 '_deadtime';...
+                };
+    end
+end
 %     x_axis = 'iout';
 
 num_to_plot = length(to_plot(:,1));
@@ -24,8 +46,9 @@ num_to_plot = length(to_plot(:,1));
 %% Measurement
 for index = 1:num_to_plot
 
-    file = sprintf('./L_%s/SC_Regulation_%iV_%i_%ik_%iOhm_diode%i.dat',... 
-        inductor,to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5})
+    file = sprintf('./L_%s/SC_Regulation_%iV_%i_%ik_%iOhm_diode%i%s.dat',... 
+        inductor,to_plot{index,1},to_plot{index,2},to_plot{index,3}, ...
+        to_plot{index,4},to_plot{index,5},to_plot{index,6})
     data = csvread(file,1,0);
     duty = to_plot{index,2}/100;
     vin = data(:,1);
@@ -44,34 +67,28 @@ for index = 1:num_to_plot
     end
     hold on;
     legend_info{index} = sprintf('Measurement: 5.6uH %iV 0.%i %ikHz %i$\\Omega$ %i',... 
-        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5})
+        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5});
 end
 
 %%      Calculation
 
-
+ax = gca;
+ax.ColorOrderIndex = 1;
 for index = 1:num_to_plot
 
-   
-    Reff = 100e-3;
-    L = 5.6e-6;
     fsw = to_plot{index,3}*1e3;
-    file = sprintf('./L_%s/SC_Regulation_%iV_%i_%ik_%iOhm_diode%i.dat',... 
-        inductor,to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5})
+    file = sprintf('./L_%s/SC_Regulation_%iV_%i_%ik_%iOhm_diode%i%s.dat',... 
+        inductor,to_plot{index,1},to_plot{index,2},to_plot{index,3}, ...
+        to_plot{index,4},to_plot{index,5},to_plot{index,6})
     data = csvread(file,1,0);
     duty = to_plot{index,2}/100;
     vin = data(:,1);
     vout = data(:,3);
     iout = data(:,4);     
     pin = data(:,5);
+      
+    [ploss, Pcond, Pind, Poverlap, Pcoss] = calculate_loss(vin,iout,fsw,duty,L);      % total loss
     
-    Iripple = duty.*(1-duty).*vin/6./(2*fsw.*L)       % current ripple
-    Irms2 = iout.^2 + Iripple.^2/12; % RMS current
-    Pcond = Irms2*Reff;           % Conduction loss
-    Pcore = 0.029;       % Core loss
-    Poverlap = 5*vin/3.*iout/3*9e-9*fsw;
-    Pcoss = 6*(vin/3).^2*170e-12*fsw;
-    ploss = Pcond + Pcore + Poverlap + Pcoss;      % total loss
     
     efficiency = (pin - ploss)./pin;
     
@@ -85,8 +102,8 @@ for index = 1:num_to_plot
         plot(iout,rout,'--');
     end
     hold on;
-    legend_info{end+1} = sprintf('Simulation: 5.6uH %iV 0.%i %ikHz %i$\\Omega$ %i',... 
-        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5})
+    legend_info{end+1} = sprintf('Calculation: 5.6uH %iV 0.%i %ikHz %i$\\Omega$ %i',... 
+        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,4},to_plot{index,5});
 end
 
 %%
@@ -94,8 +111,8 @@ if strcmp(plot_type,'loss') == 1
     ylim([0.1 10])
     xlim([0.1 10])
     ylabel('Power loss (W)')
-    plot([1 10], [0.1 10], '--')
-    plot([0.1 10], [0.1 10], '--')
+%     plot([1 10], [0.1 10], '--')
+%     plot([0.1 10], [0.1 10], '--')
 elseif strcmp(plot_type,'efficiency') == 1
     ylim([90 98])
     xlim([0 5])
