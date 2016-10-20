@@ -8,8 +8,8 @@ plot_type = 'loss';
 legend_info = {};
 Marker = {'^-','o-','x-','s-','-+','.-'};
 
-inductor = '1000n';
-to_compare = 'vin';
+inductor = '5600n';
+to_compare = 'frequency';
 
 if strcmp(inductor, '5600n') ==1
     L = 5.6e-6;

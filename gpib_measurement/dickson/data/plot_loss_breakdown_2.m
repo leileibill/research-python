@@ -17,14 +17,10 @@ if strcmp(inductor, '5600n') ==1
                 };
 elseif strcmp(inductor, '1000n') ==1
     L = 1.0e-6;
-%     to_plot = { 90 80 500 20 80; ...
-%                 130 55 500 20 80;...
-%                 ... %150 48 250 20 '';...
-%                 };
-    to_plot = { 90 80 250 20 80 ; ...
-                90 80 500 20 80 ;...
-                90 80 700 20 80 ;...
-                };            
+    to_plot = { 90 80 500 20 80; ...
+                130 55 500 20 80;...
+                ... %150 48 250 20 '';...
+                };
 end
 %     x_axis = 'iout';
 
@@ -57,8 +53,8 @@ for index = 1:num_to_plot
 
     legend_info = {'Inductor loss' 'Coss loss ' 'Overlap loss' 'Switch conduction loss' };
     
-    xlim([0 5])
-    ylim([0 4])
+    xlim([0.1 5])
+%     ylim([0 5])
     ylabel('Power loss (W)')
 
     xlabel('Output current (A)')
