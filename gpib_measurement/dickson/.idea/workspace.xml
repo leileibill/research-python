@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c06c2d-ff28-4e2f-a300-4d6338c0c463" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_153307.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_153438.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_154234.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_155243.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_162238.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_162238.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_164233.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_164233.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_165007.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_165007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_165457.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_220642.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/20161014/SC_Regulation_20161014_220642.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC_efficiency_6030a_yokogawa.py" afterPath="$PROJECT_DIR$/SC_efficiency_6030a_yokogawa.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/L_5600n/SC_Regulation_90V_80_250k_20Ohm_diode80.dat" afterPath="$PROJECT_DIR$/data/L_5600n/SC_Regulation_90V_80_250k_20Ohm_diode80.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/plot_efficiency.m" afterPath="$PROJECT_DIR$/data/plot_efficiency.m" />
     </list>
     <ignored path="dickson.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +27,8 @@
       <file leaf-file-name="SC_efficiency_6030a_yokogawa.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SC_efficiency_6030a_yokogawa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="47" column="96" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
+            <state relative-caret-position="448">
+              <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -387,7 +375,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3301282" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301282" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -540,8 +528,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SC_efficiency_6030a_yokogawa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="47" column="96" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
+        <state relative-caret-position="448">
+          <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
