@@ -13,7 +13,7 @@ if Vin == 90
                 90 80 700 20 80 '_deadtime';...
             };
 elseif Vin == 130
-    to_plot = { 130 55 250 20 90 '_deadtime'; ...
+    to_plot = { 130 55 250 20 80 '_deadtime'; ...
                 130 55 500 20 80 '_deadtime';...
             };
 end
@@ -59,7 +59,7 @@ if strcmp(plot_type,'loss') == 1
     plot([1 10], [0.1 10], '--')
     plot([0.1 10], [0.1 10], '--')
 elseif strcmp(plot_type,'efficiency') == 1
-    ylim([80 97])
+    ylim([90 97])
     xlim([00 5])
     ylabel('Efficiency (\%)')
 else
