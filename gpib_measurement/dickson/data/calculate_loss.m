@@ -8,7 +8,7 @@ function [Ploss, Pcond, Pind, Poverlap, Pcoss] = calculate_loss(vin,iout,fsw,dut
     Ilow = iout - Iripple/2;
     Irms2 = iout.^2 + Iripple.^2/12; % RMS current
     Pcond = Irms2*Reff;           % Conduction loss
-    dt = 100e-9;        % deadtime
+    dt = 110e-9;        % deadtime
     
     %% Inductor dc and ac loss
     if L ==5.6e-6
@@ -18,7 +18,7 @@ function [Ploss, Pcond, Pind, Poverlap, Pcoss] = calculate_loss(vin,iout,fsw,dut
         k = 0.0444/(250e3^alpha);
     elseif L == 1.0e-6
         Rdc = 0.011;
-        alpha = 1.35;
+        alpha = 1.05;
         beta = 2.11;
         k = 0.017/(500e3^alpha);
     end
@@ -49,7 +49,8 @@ function [Ploss, Pcond, Pind, Poverlap, Pcoss] = calculate_loss(vin,iout,fsw,dut
         Poverlap = max(0,5*vin/3.*((iout-Iripple/2))/3*4e-9*fsw);    % Overlap switching loss
         % for now, include the body diode loss in the overlap loss
         x = Ilow<Isoft;
-        Poverlap(x) = Poverlap(x) + -Ilow(x)*2*dt*fsw*2;
+        tt = max(0,Coss.*vin./(-Ilow));
+        Poverlap(x) = Poverlap(x) + -Ilow(x)*2.2.*(dt-tt(x))*fsw*2;
     end
    
     
