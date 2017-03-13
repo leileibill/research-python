@@ -33,9 +33,9 @@ meter_Out = prologix_wt310(prologix=gpib, addr=1, debug=False)
 # ==========================================================================
 # Parameter initialization
 # =========================================================================/
-power_supply.setCurrent(1.1)
+power_supply.setCurrent(2.1)
 power_supply.setVoltage(0)
-setVoltage(power_supply,74,5)
+setVoltage(power_supply,24,5)
 
 # eload.setMode("CURR")
 # eload.setSlew(10)
@@ -44,8 +44,8 @@ setVoltage(power_supply,74,5)
 
 eload.setMode("RES")
 eload.setSlew(10)
-eload.setValue(100)
-load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4.5, 4]
+eload.setValue(20)
+load_resistance = [20, 10, 9, 8, 7]
 # load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4.5, 4, 3.5, 3, 2.75, 2.5]
 load_current = np.arange(0.2, 1.0 + 0.1, 0.1)
 
@@ -73,7 +73,7 @@ timestamp = time.strftime('%Y%m%d_%H%M%S')
 header_string = ("Vin", "Iin", "Vout", "Iout", "Pin", "Pout", "Efficiency")
 
 # root_filename = sys.argv[1]
-filename = "%s_%s.dat" % ("SC_Regulation", timestamp)
+filename = "%s_%s.dat" % ("3level_1stage", timestamp)
 # filename= "SCRegulation_60_32V.dat"
 f = open(foldername + "/" + filename, "w")
 
@@ -135,14 +135,10 @@ for iter in range(N):
 
 f.close()
 eload.setMode("RES")
-eload.setValue(5)
-time.sleep(time_to_observe_1)
 eload.setValue(10)
 time.sleep(time_to_observe_1)
 eload.setValue(20)
-time.sleep(time_to_observe_1)
-eload.setValue(100)
-setVoltage(power_supply, 0, 20)
+setVoltage(power_supply, 0, 10)
 gpib.serial.close()
 
 # ==========================================================================

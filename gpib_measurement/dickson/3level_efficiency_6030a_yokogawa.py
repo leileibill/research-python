@@ -24,8 +24,8 @@ power_supply.activate()
 
 eload= prologix_6060b(prologix=gpib, addr=6, mode="CURR", rang=6,  debug=False)
 #
-meter_In = prologix_wt310(prologix=gpib, addr=2, debug=False)
-meter_Out = prologix_wt310(prologix=gpib, addr=1, debug=False)
+meter_In = prologix_wt310(prologix=gpib, addr=2, debug=False, mode='DC')
+meter_Out = prologix_wt310(prologix=gpib, addr=1, debug=False, mode='DC')
 # meter_Vout = prologix_FLUKE45(prologix=gpib, addr=3, mode="VDC", maxrange="25", nplc="2", debug=False)
 # meter_Iout = prologix_FLUKE45(prologix=gpib, addr=4, mode="ADC", maxrange="2", nplc="2", debug=False)
 
@@ -33,19 +33,20 @@ meter_Out = prologix_wt310(prologix=gpib, addr=1, debug=False)
 # ==========================================================================
 # Parameter initialization
 # =========================================================================/
-power_supply.setCurrent(1.1)
+
+eload.setMode("RES")
+eload.setSlew(10)
+eload.setValue(20)
+
+power_supply.setCurrent(4.1)
 power_supply.setVoltage(0)
-setVoltage(power_supply,74,5)
+setVoltage(power_supply,48,5)
 
 # eload.setMode("CURR")
 # eload.setSlew(10)
 # eload.setValue(0.1)
 
-
-eload.setMode("RES")
-eload.setSlew(10)
-eload.setValue(100)
-load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4.5, 4]
+load_resistance = [20, 15, 12, 10, 9, 8, 7, 6.5, 6, 5.5, 5, 4.5, 4]
 # load_resistance = [50, 45, 40, 35, 30, 25, 20, 15, 12, 10, 8, 7, 6, 5, 4.5, 4, 3.5, 3, 2.75, 2.5]
 load_current = np.arange(0.2, 1.0 + 0.1, 0.1)
 
@@ -73,7 +74,7 @@ timestamp = time.strftime('%Y%m%d_%H%M%S')
 header_string = ("Vin", "Iin", "Vout", "Iout", "Pin", "Pout", "Efficiency")
 
 # root_filename = sys.argv[1]
-filename = "%s_%s.dat" % ("SC_Regulation", timestamp)
+filename = "%s_%s.dat" % ("3level", timestamp)
 # filename= "SCRegulation_60_32V.dat"
 f = open(foldername + "/" + filename, "w")
 
@@ -135,14 +136,10 @@ for iter in range(N):
 
 f.close()
 eload.setMode("RES")
-eload.setValue(5)
-time.sleep(time_to_observe_1)
 eload.setValue(10)
 time.sleep(time_to_observe_1)
 eload.setValue(20)
-time.sleep(time_to_observe_1)
-eload.setValue(100)
-setVoltage(power_supply, 0, 20)
+setVoltage(power_supply, 0, 10)
 gpib.serial.close()
 
 # ==========================================================================
@@ -153,7 +150,7 @@ plt.ylabel('Efficiency [%]')
 plt.xlabel('Output Current [A]')
 plt.grid(True)
 # plt.xlim(0, 5)
-plt.ylim(70, 100)
+plt.ylim(90, 100)
 
 filename = "%s_%s.png" % ("SC_Regulation", timestamp)
 plt.savefig(foldername + "/" + filename)
