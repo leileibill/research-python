@@ -3,7 +3,7 @@ close all
 clc
 scale = 2;
 set_figure_style_pre();
-plot_type = 'rout';
+plot_type = 'efficiency';
 inductor = '5600n';
 
     
