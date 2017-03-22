@@ -4,7 +4,7 @@ clc
 scale = 2;
 set_figure_style_pre();
 plot_type = 'efficiency';
-inductor = '5600n';
+inductor = '1000n';
 
     
 if strcmp(inductor,'1000n') == 1
@@ -81,4 +81,4 @@ legend(legend_info,'Location','Best');
 set_figure_style();
 resize_figure();
 
-export_figure('figs/eff_5600n_vin','png')
+% export_figure('figs/eff_5600n_vin','png')

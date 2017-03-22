@@ -5,16 +5,13 @@ scale = 2;
 set_figure_style_pre();
 plot_type = 'efficiency';
 inductor = '0100n';
-Vin = 50;
 
-to_plot = { ...
-%             50 300 20 70 '_deadtime3';...
-            50 375 20 70 '_deadtime3';...   
-%             50 250 20 70 '_deadtime3'; ...
-%             50 500 20 70 '_deadtime3';...
+
+to_plot = { 50 375 20 70 '_deadtime3';...   
+            74 375 20 70 '_deadtime3';...            
             };
 %     x_axis = 'iout';
-Marker = {'^-','o-','x-','s-','-+','.-'};
+Marker = {'^--','o--','x-','s-','-+','.-'};
 num_to_plot = length(to_plot(:,1));
 legend_info = {};
 
@@ -42,19 +39,20 @@ for index = 1:num_to_plot
         plot(iout,[0; rout],Marker{index});
     end
     hold on;
-    legend_info{index} = sprintf('ZCS %iV %ikHz %i$\\Omega$ %s',... 
-        to_plot{index,1},to_plot{index,2},to_plot{index,3},to_plot{index,5}(2:end))
+    legend_info{index} = sprintf('ZCS %iV %ikHz %s',... 
+        to_plot{index,1},to_plot{index,2},to_plot{index,5}(2:end))
 end
 
 
-to_plot = {50 375 20 70 4 2 8;...            
-%            50 375 20 70 4 2 12;...        
+to_plot = {50 375 20 70 4 2 12;...            
+%            74 375 20 70 4 2 12;...    
+           74 375 20 80 4 2 12;...
             };
 %     x_axis = 'iout';
-Marker = {'^--','o--','x--','s--','--+','.--'};
+Marker = {'^-','o-','x--','s--','--+','.--'};
 num_to_plot = length(to_plot(:,1));
-% ax = gca;
-% ax.ColorOrderIndex = 1;
+ax = gca;
+ax.ColorOrderIndex = 1;
 
 for index = 1:num_to_plot
 
@@ -93,11 +91,11 @@ if strcmp(plot_type,'loss') == 1
     plot([0.1 10], [0.1 10], '--')
 elseif strcmp(plot_type,'efficiency') == 1
     ylim([90 98])
-    xlim([00 2])
+    xlim([00 3])
     ylabel('Efficiency (\%)')
 else
-    ylim([0 0.2])
-    xlim([0.5 2])
+    ylim([0 0.3])
+    xlim([0.5 3])
     ylabel('Output resistance ($\Omega$)')   
 end
 
@@ -105,10 +103,9 @@ end
 
 xlabel('Output current (A)')
 
-legend(legend_info,'Location','Best');
-
+% legend(legend_info,'Location','Best');
+legend('ZCS 50 V','ZCS 75 V','ZVS 50 V','ZVS 75 V','Location','Best');
 set_figure_style();
 resize_figure();
-
-
 % export_figure(sprintf('figs/eff_%iV_1000n_frequency',Vin),'png')
+export_figure('eff_zvs','pdf,png')

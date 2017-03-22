@@ -6,8 +6,7 @@ set_figure_style_pre(2);
 plot_type = 'efficiency';
 
 legend_info = {};
-%Marker = {'^-','o-','x-','s-','-+','.-'};
-Marker = {'o-','^-','x-','x-','s-','s-','-+','-+','.-','.-'};
+Marker = {'^-','o--','x-','s-','-+','.-'};
 %%  1000 nH inductor
 inductor = '1000n';
 to_plot = { 90 80 250 20 '_diode80_deadtime'; ...
@@ -103,13 +102,10 @@ end
 
 
 xlabel('Output current (A)')
-
-legend(legend_info,'Location','Best');
-
+% 
+% legend(legend_info,'Location','Best');
+legend('QSW, 1 uH, 250 kHz','QSW, 1 uH, 500 kHz','Hard-switched, 5.6 uH, 250 kHz ','Location','best')
 set_figure_style();
 resize_figure();
 
-
-return
-
-% export_figure('eff_180','png')
+export_figure('eff_qsw','pdf,png')
