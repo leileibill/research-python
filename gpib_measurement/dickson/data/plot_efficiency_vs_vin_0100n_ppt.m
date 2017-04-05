@@ -7,11 +7,11 @@ plot_type = 'efficiency';
 inductor = '0100n';
 
 
-to_plot = { 50 375 20 70 '_deadtime3';...   
+to_plot = { ...%50 375 20 70 '_deadtime3';...   
             74 375 20 70 '_deadtime3';...            
             };
 %     x_axis = 'iout';
-Marker = {'^--','o--','x-','s-','-+','.-'};
+Marker = {'^-.','o--','x-','s-','-+','.-'};
 num_to_plot = length(to_plot(:,1));
 legend_info = {};
 
@@ -44,7 +44,7 @@ for index = 1:num_to_plot
 end
 
 
-to_plot = {50 375 20 70 4 2 12;...            
+to_plot = {...%50 375 20 70 4 2 12;...            
 %            74 375 20 70 4 2 12;...    
            74 375 20 80 4 2 12;...
             };
@@ -104,8 +104,8 @@ end
 xlabel('Output current (A)')
 
 % legend(legend_info,'Location','Best');
-legend('ZCS 50 V','ZCS 75 V','ZVS 50 V','ZVS 75 V','Location','Best');
+legend('ZCS 75 V','ZVS 75 V','Location','Best');
 set_figure_style();
 resize_figure();
 % export_figure(sprintf('figs/eff_%iV_1000n_frequency',Vin),'png')
-export_figure('eff_zvs','pdf,png')
+export_figure('figs/eff_zvs','pdf,png')
